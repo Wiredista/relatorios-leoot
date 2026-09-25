@@ -2,8 +2,8 @@
 title: Relatório de Experimento - Lei de Hooke e Oscilações
 author: |-
   \begin{tabular}{cc}
-    Álvaro Antônio de Lacerda Rosário & RA: 12511ETE011 \\
-    Ana Clara Pereira da Silva & RA: 12521ETE001 \\
+    Álvaro Antônio de Lacerda Rosário & RA: 12521ETE001 \\
+    Ana Clara Pereira da Silva & RA: 12511ETE011 \\
     Marya Eduarda Rodrigues da Costa & RA: 12511ETE006 \\
     Vinicius Xavier Faria & RA: 12411ETE005
   \end{tabular}
