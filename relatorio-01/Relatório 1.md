@@ -76,7 +76,7 @@ Onde $F$ é a força restauradora, $k$ é a constante elástica da mola (que ind
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.6\textwidth]{r1_fig1.jpg}
+\includegraphics[width=0.4\textwidth]{r1_fig1.jpg}
 \caption{Esquema da montagem experimental do sistema massa-mola. Fonte: Ribeiro (2005, p. 78).}
 \label{fig:esquema_montagem}
 \end{figure}
