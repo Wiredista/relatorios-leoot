@@ -1,27 +1,25 @@
-# Verifica se um argumento foi passado
+#!/bin/bash
 if [ -z "$1" ]; then
-    echo "Uso: $0 arquivo.md"
+    echo "Uso: $0 caminho/para/arquivo.md"
     exit 1
 fi
 
-# Pega o nome do arquivo sem a extensão .md
-FILENAME=$(basename "$1" .md)
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+FILE_INPUT="$1"
 
-# Executa o comando Pandoc
-# $1 é o arquivo de entrada (ex: artigo.md)
-# $FILENAME.pdf será o arquivo de saída (ex: artigo.pdf)
-echo "Convertendo $1 para $FILENAME.pdf..."
+# Obter caminhos absolutos
+ABS_FILE="$(realpath "$FILE_INPUT")"
+DIRNAME="$(dirname "$ABS_FILE")"
+BASENAME="$(basename "$ABS_FILE" .md)"
 
-pandoc "$1" \
-    -o "$FILENAME.pdf" \
-    -V geometry:margin=2.5cm \
-    -V fontsize=12pt \
-    --pdf-engine=pdflatex \
-    --number-sections \
-    --highlight-style pygments
+echo "Convertendo $ABS_FILE para $DIRNAME/$BASENAME.pdf..."
+
+cd "$DIRNAME"
+
+pandoc "$BASENAME.md"     -o "$BASENAME.pdf"     --resource-path=".:figuras:$ROOT_DIR:$DIRNAME"     -V geometry:margin=2.5cm     -V fontsize=12pt     --pdf-engine=pdflatex     --number-sections     --highlight-style pygments
 
 if [ $? -eq 0 ]; then
-    echo "Sucesso! Arquivo gerado: $FILENAME.pdf"
+    echo "Sucesso! Arquivo gerado: $DIRNAME/$BASENAME.pdf"
 else
     echo "Erro na conversão."
     exit 1

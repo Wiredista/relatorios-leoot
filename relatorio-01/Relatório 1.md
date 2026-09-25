@@ -14,7 +14,8 @@ header-includes:
   - \usepackage{indentfirst}
   - \renewcommand{\contentsname}{Sumário}
   - \usepackage{titling}
-  - \pretitle{\begin{center}\includegraphics[width=3cm]{logo-ufu.png}\\[2cm]\LARGE\bfseries}
+  - \graphicspath{{figuras/}{../}}
+  - \pretitle{\begin{center}\includegraphics[width=3cm]{logo-infis.png}\\[2cm]\LARGE\bfseries}
   - \posttitle{\end{center}}
   - \preauthor{\begin{center}\large}
   - \postauthor{\end{center}}
@@ -74,7 +75,7 @@ Onde $F$ é a força restauradora, $k$ é a constante elástica da mola (que ind
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.6\textwidth]{UFU/r1_fig1.jpg}
+\includegraphics[width=0.6\textwidth]{r1_fig1.jpg}
 \caption{Esquema da montagem experimental do sistema massa-mola. Fonte: Ribeiro (2005, p. 78).}
 \label{fig:esquema_montagem}
 \end{figure}
@@ -248,7 +249,7 @@ A Figura 2 apresenta o gráfico da deformação estática da mola em função da
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{UFU/grafico_metodo_estatico.png}
+\includegraphics[width=0.85\textwidth]{grafico_metodo_estatico.png}
 \caption{Gráfico de deformação estática $\Delta x \times m$ e ajuste linear (Lei de Hooke).}
 \label{fig:estatico}
 \end{figure}
@@ -321,7 +322,7 @@ A Figura 3 apresenta o gráfico de dispersão de $T^2 \times m$ com as respectiv
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{UFU/grafico_metodo_dinamico.png}
+\includegraphics[width=0.85\textwidth]{grafico_metodo_dinamico.png}
 \caption{Gráfico de linearização $T^2 \times m$ e reta de ajuste linear pelo método dinâmico.}
 \label{fig:dinamico}
 \end{figure}
@@ -371,7 +372,7 @@ A Figura 4 ilustra o comportamento temporal simultâneo do deslocamento $x(t)$, 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{UFU/grafico_cinematica_mhs.png}
+\includegraphics[width=0.85\textwidth]{grafico_cinematica_mhs.png}
 \caption{Curvas cinemáticas $x(t)$, $v(t)$ e $a(t)$ para $m = 160\text{ g}$, $k = 15{,}70\text{ N/m}$ e $A = 2{,}0\text{ cm}$.}
 \label{fig:cinematica}
 \end{figure}
@@ -391,7 +392,7 @@ A Figura 5 apresenta a evolução temporal das energias cinética ($E_c$), poten
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{UFU/grafico_energias_mhs.png}
+\includegraphics[width=0.85\textwidth]{grafico_energias_mhs.png}
 \caption{Distribuição e conservação de energia do oscilador ao longo de um período ($T = 0{,}634\text{ s}$).}
 \label{fig:energias}
 \end{figure}
