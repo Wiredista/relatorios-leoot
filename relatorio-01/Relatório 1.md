@@ -19,7 +19,7 @@ header-includes:
   - \posttitle{\end{center}}
   - \preauthor{\begin{center}\large}
   - \postauthor{\end{center}}
-  - \predate{\vfill\begin{center}\large}
+  - \predate{\vfill\begin{center}\large Uberlândia -- MG\\[0.3cm]}
   - \postdate{\end{center}\newpage}
 subtitle: |-
   Laboratório de Ensino em Oscilações, Ondas e Termodinâmica \
@@ -32,7 +32,7 @@ keywords:
   - Sistema massa-mola
   - Constante elástica
   - Movimento Harmônico Simples
-date: "Uberlândia -- MG \\\\ \today"
+date: '`\today`{=latex}'
 toc-title: Sumário
 ---
 
