@@ -25,40 +25,6 @@ Repositório acadêmico destinado ao versionamento, análise estatística de dad
 
 ---
 
-## 📂 Arquitetura do Repositório
-
-O repositório é organizado de forma modular, mantendo na raiz apenas arquivos globais e cada relatório isolado em sua respectiva pasta com seus próprios dados, scripts e figuras:
-
-```
-relatorios-leoot/
-├── README.md                          # Documentação geral do repositório
-├── md2pdf.sh                          # Script global de compilação Markdown -> PDF (Pandoc/LaTeX)
-├── logo-ufu.png                       # Brasão institucional da UFU (usado no cabeçalho dos relatórios)
-│
-└── relatorio-01/                      # 🔬 Relatório 1: Sistema Massa-Mola Vertical
-    ├── Relatório 1.md                 # Código-fonte formatado nas normas ABNT
-    ├── Relatório 1.pdf                # PDF compilado pronto para entrega
-    │
-    ├── dados/                         # Planilhas com dados experimentais brutos
-    │   ├── dados_estatico.csv         # Medições estáticas (massa vs posição)
-    │   └── dados_dinamico.csv         # Medições dinâmicas (tempos de 10 oscilações)
-    │
-    ├── scripts/                       # Scripts em Python para tratamento e plotagem
-    │   ├── calcular_tabelas.py        # Processamento estatístico e propagação de incertezas
-    │   ├── gerar_grafico_estatico.py  # Regressão linear Δx vs m (Método Estático)
-    │   ├── gerar_grafico_dinamico.py  # Regressão linear T² vs m (Método Dinâmico)
-    │   └── gerar_graficos_mhs_simulacao.py # Simulação teórica de cinemática e energias do MHS
-    │
-    └── figuras/                       # Figuras e gráficos gerados em alta resolução (300 DPI)
-        ├── grafico_metodo_estatico.png
-        ├── grafico_metodo_dinamico.png
-        ├── grafico_cinematica_mhs.png
-        ├── grafico_energias_mhs.png
-        └── r1_fig1.jpg                # Esquema conceitual da montagem experimental
-```
-
----
-
 ## 🛠️ Como Reproduzir as Análises e Compilar
 
 ### 1. Pré-requisitos
@@ -66,29 +32,27 @@ relatorios-leoot/
 * **Pandoc** ($\ge 2.19$)
 * **TeX Live / PDFLaTeX** (com pacotes `graphicx`, `amsmath`, `fcolorbox`, `titling`, `indentfirst`)
 
-### 2. Executar Scripts de Análise do Relatório 1
-Navegue até a pasta de scripts do relatório:
+### 2. Executar Scripts de Análise
+Cada relatório possui sua própria subpasta `scripts/` contendo os códigos em Python para tratamento dos dados e geração dos gráficos. Para executá-los:
+
+1. Navegue até a pasta de scripts do relatório desejado:
+   ```bash
+   cd relatorio-XX/scripts
+   ```
+2. Execute o script desejado (por exemplo, cálculo de tabelas ou geração de gráficos):
+   ```bash
+   python3 nome_do_script.py
+   ```
+Os scripts leem os arquivos da pasta `../dados/` e salvam os gráficos gerados diretamente em `../figuras/`.
+
+### 3. Compilar Relatórios em PDF
+A partir da raiz do repositório, execute o utilitário `md2pdf.sh` passando o caminho relativo do arquivo Markdown correspondente:
 ```bash
-cd relatorio-01/scripts
-
-# Processar as tabelas com incertezas propagadas:
-python3 calcular_tabelas.py
-
-# Gerar todos os gráficos:
-python3 gerar_grafico_estatico.py
-python3 gerar_grafico_dinamico.py
-python3 gerar_graficos_mhs_simulacao.py
+./md2pdf.sh "relatorio-XX/Relatório X.md"
 ```
-
-### 3. Compilar o Relatório em PDF
-A partir da raiz do repositório, execute o utilitário `md2pdf.sh` passando o caminho do Markdown:
-```bash
-./md2pdf.sh "relatorio-01/Relatório 1.md"
-```
-O PDF atualizado será salvo automaticamente na pasta correspondente (`relatorio-01/Relatório 1.pdf`).
+O arquivo `.pdf` compilado será salvo automaticamente na mesma pasta do relatório.
 
 ---
 
 ## 📚 Referências Principais
 - **Apostila de Laboratório: Oscilações, Ondas e Óptica**, Instituto de Física, Universidade Federal de Uberlândia (UFU), 2024.
-- **Sears & Zemansky: Física II — Termodinâmica e Ondas** (YOUNG, H. D.; FREEDMAN, R. A., 14ª ed., Pearson, 2016).
