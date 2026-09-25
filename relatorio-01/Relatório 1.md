@@ -15,12 +15,12 @@ header-includes:
   - \renewcommand{\contentsname}{Sumário}
   - \usepackage{titling}
   - \graphicspath{{figuras/}{../}}
-  - \pretitle{\begin{center}\includegraphics[width=3cm]{logo-infis.png}\\[2cm]\LARGE\bfseries}
+  - \pretitle{\begin{center}\includegraphics[width=10cm]{logo-infis.png}\\[2cm]\LARGE\bfseries}
   - \posttitle{\end{center}}
   - \preauthor{\begin{center}\large}
   - \postauthor{\end{center}}
-  - \predate{\begin{center}\large}
-  - \postdate{\end{center}\vspace{2cm}\newpage}
+  - \predate{\vfill\begin{center}\large}
+  - \postdate{\end{center}\newpage}
 subtitle: |-
   Laboratório de Ensino em Oscilações, Ondas e Termodinâmica \
   Instituto de Física (INFIS) \
@@ -32,6 +32,7 @@ keywords:
   - Sistema massa-mola
   - Constante elástica
   - Movimento Harmônico Simples
+date: "Uberlândia -- MG \\\\ \today"
 toc-title: Sumário
 ---
 
