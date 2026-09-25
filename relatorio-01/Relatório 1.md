@@ -428,3 +428,13 @@ A Figura 5 apresenta a evolução temporal das energias cinética ($E_c$), poten
 \vspace{0.4cm}
 
 \noindent HALLIDAY, D.; RESNICK, R.; WALKER, J. **Fundamentos de Física: Gravitação, Ondas e Termodinâmica**. 10. ed. Rio de Janeiro: LTC, 2016. v. 2.
+
+# Declaração de Uso de Inteligência Artificial {.unnumbered}
+
+Em conformidade com o documento institucional *Recomendações para o Uso e Desenvolvimento Ético e Responsável de Inteligência Artificial na Universidade Federal de Uberlândia* (Item 4.1.3), declara-se que a ferramenta de IA **Antigravity (Google DeepMind / Gemini)** foi utilizada exclusivamente como suporte computacional para:
+
+1. **Tratamento Estatístico e Automação Numérica:** Desenvolvimento de scripts em Python para cálculo de médias, propagação de incertezas instrumentais e estatísticas, e regressões lineares pelos métodos estático e dinâmico.
+2. **Visualização de Dados:** Geração dos gráficos experimentais ($\Delta x \times m$ e $T^2 \times m$) e das curvas de simulação temporal teórica do MHS ($x, v, a$ e balanço de energias).
+3. **Tipografia e Sintaxe:** Formatação estrutural do modelo em Markdown/LaTeX nas normas ABNT, ajuste dimensional de tabelas e automação de compilação via Pandoc/PDFLaTeX.
+
+\noindent Ressalta-se que **a redação do relatório, formulação de hipóteses, interpretação física dos resultados, discussões e conclusões foram desenvolvidas exclusivamente pelos alunos do grupo**, limitando-se a intervenção textual da IA a revisões gramaticais, pontuação e sintaxe de equações em LaTeX. Todos os cálculos e gráficos gerados foram validados pelo grupo.
