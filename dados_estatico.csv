@@ -1,0 +1,7 @@
+configuracao,massa_g,posicao_mm,posicao_incerteza_mm
+m_s + 0_mp,10.0,460.0,0.5
+m_s + 1_mp,60.0,434.0,0.5
+m_s + 2_mp,110.0,396.0,0.5
+m_s + 3_mp,160.0,366.0,0.5
+m_s + 4_mp,210.0,335.0,0.5
+m_s + 5_mp,260.0,306.5,0.5
