@@ -321,38 +321,46 @@ A Figura 3 apresenta o gráfico de dispersão de $T^2 \times m$ com as respectiv
 \label{fig:dinamico}
 \end{figure}
 
-### Análise e Discussão do Método Dinâmico (Roteiro Teórico e de Resultados)
+### Análise e Discussão do Método Dinâmico
 
-> **Roteiro para a redação da sua análise:**
->
-> 1. **Análise dos Tempos Medidos e Tratamento de Outliers:**
->    - Discuta a variabilidade das medições. Note que na 1ª tomada com $60\text{ g}$, o valor medido foi $11{,}52\text{ s}$, discrepante da média ($\approx 8{,}0\text{ s}$).
->    - Atribua esse desvio a fatores operacionais (tempo de reação do operador ao disparar/parar o cronômetro ou contagem de ciclos adicionais de oscilação).
->
-> 2. **Linearização Teórica e Ajuste Gráfico ($T^2 \times m$):**
->    - **Fundamentação teórica:** A equação teórica do período do MHS é $T = 2\pi\sqrt{\frac{m}{k}}$. Ao elevar ao quadrado, obtém-se $T^2 = \left(\frac{4\pi^2}{k}\right) m$.
->    - **Resultado obtido:** O ajuste linear forneceu a reta $T^2 = (2{,}5060 \pm 0{,}0706)\,m + (0{,}0148 \pm 0{,}0123)$ com $R^2 = 0{,}9976$.
->    - A forte linearidade confirma que o período independe da amplitude para pequenas oscilações (propriedade do **isocronismo**).
->
-> 3. **Cálculo da Constante Elástica Dinâmica ($k_{\text{din}}$):**
->    - A partir do coeficiente angular $a = 2{,}5060\text{ s}^2/\text{kg}$:
->      $$k_{\text{din}} = \frac{4\pi^2}{a} = \frac{4\pi^2}{2{,}5060} = (15{,}75 \pm 0{,}44)\text{ N/m}$$
->    - A incerteza foi calculada por $\sigma_k = \frac{4\pi^2}{a^2}\sigma_a$.
->
-> 4. **Massa Efetiva da Mola (Significado Físico do Intercepto $b$):**
->    - Na modelagem ideal (mola de massa desprezível), a reta cruzaria a origem ($b = 0$).
->    - Na realidade, a mola possui massa finita $m_{\text{mola}}$ e suas espiras também oscilam. A teoria da mecânica clássica estabelece que a massa efetiva oscilante é $m_{\text{ef}} \approx \frac{1}{3} m_{\text{mola}}$.
->    - Relacionando com a equação $T^2 = \frac{4\pi^2}{k}(m + m_{\text{ef}}) = a\cdot m + b$, obtém-se:
->      $$m_{\text{ef}} = \frac{b}{a} = \frac{0{,}0148}{2{,}5060} \approx 0{,}0059\text{ kg} = 5{,}9\text{ g}$$
->    - Explique que o valor positivo do intercepto $b = 0{,}0148\text{ s}^2$ reflete fisicamente essa contribuição da massa própria da mola!
->
-> 5. **Comparação e Concordância entre os Métodos:**
->    - Compare os dois valores obtidos:
->      - **Método Estático:** $k_{\text{est}} = (15{,}64 \pm 0{,}33)\text{ N/m}$
->      - **Método Dinâmico:** $k_{\text{din}} = (15{,}75 \pm 0{,}44)\text{ N/m}$
->    - Calcule o erro relativo percentual (discrepância):
->      $$\text{Erro Relativo} = \frac{|15{,}64 - 15{,}75|}{15{,}64} \times 100\% = 0{,}70\%$$
->    - Conclua que a discrepância é inferior a $1\%$ e que os intervalos de incerteza se sobrepõem perfeitamente ($[15{,}31\,;\,15{,}97]\text{ N/m}$ e $[15{,}31\,;\,16{,}19]\text{ N/m}$), comprovando a concordância e a acurácia de ambos os métodos experimentais.
+A análise dos tempos experimentais coletados (Tabela 2) e dos períodos processados (Tabela 3) evidencia a consistência do comportamento dinâmico do sistema. A dispersão observada entre as repetições reflete principalmente o tempo de reação humano no disparo e travamento do cronômetro manual, além de pequenas oscilações laterais residuais, sendo adequadamente tratada pela propagação combinada do desvio-padrão da média com a incerteza instrumental ($\sigma_{\text{inst}} = 0{,}01\text{ s}$).
+
+A modelagem teórica do Movimento Harmônico Simples estabelece que o período de oscilação para uma mola ideal é dado por $T = 2\pi\sqrt{\frac{m}{k}}$. Elevando ambos os membros ao quadrado, obtém-se a relação de linearização:
+
+\begin{equation}
+T^2 = \left(\frac{4\pi^2}{k}\right) m
+\end{equation}
+
+A regressão linear por mínimos quadrados aplicada aos pares $(m, T^2)$ da Tabela 3 produziu a reta de ajuste apresentada na Figura 3:
+\begin{equation}
+T^2 = (2{,}5060 \pm 0{,}0706)\,m + (0{,}0148 \pm 0{,}0123)
+\end{equation}
+com coeficiente de determinação $R^2 = 0{,}9976$. A forte correlação linear obtida comprova empiricamente a propriedade do **isocronismo** das pequenas oscilações harmônicas, demonstrando que o período depende unicamente da inércia do sistema e da rigidez da mola, permanecendo independente da amplitude de oscilação.
+
+Identificando o coeficiente angular da reta ajustada como $a = \frac{4\pi^2}{k_{\text{din}}}$, calcula-se a constante elástica dinâmica:
+\begin{equation}
+k_{\text{din}} = \frac{4\pi^2}{a} = \frac{4\pi^2}{2{,}5060} = (15{,}75 \pm 0{,}44)\text{ N/m}
+\end{equation}
+sendo a incerteza calculada por $\sigma_{k_{\text{din}}} = \left(\frac{4\pi^2}{a^2}\right)\sigma_a$.
+
+Ademais, a análise do coeficiente linear ($b = 0{,}0148 \pm 0{,}0123\text{ s}^2$) revela um aspecto físico fundamental. Em um modelo puramente ideal (mola de massa nula), a reta deveria cruzar a origem ($b = 0$). No entanto, como a mola real possui massa finita $m_{\text{mola}}$, suas espiras também participam do movimento oscilatório com velocidades que variam linearmente do suporte fixo até a extremidade livre. A mecânica clássica demonstra que a inércia efetiva adicional introduzida pela mola equivale a $m_{\text{ef}} \approx \frac{1}{3} m_{\text{mola}}$, de modo que a equação do período assume a forma $T^2 = \frac{4\pi^2}{k}(m + m_{\text{ef}}) = a\cdot m + b$. A partir dessa relação, determina-se a massa efetiva da mola:
+\begin{equation}
+m_{\text{ef}} = \frac{b}{a} = \frac{0{,}0148}{2{,}5060} \approx 0{,}0059\text{ kg} = (5{,}9 \pm 4{,}9)\text{ g}
+\end{equation}
+O valor positivo do intercepto reflete com clareza a contribuição inercial da massa própria da mola no período de oscilação.
+
+### Comparação entre os Métodos Estático e Dinâmico
+
+Confrontando os valores obtidos para a constante elástica da mesma mola helicoidal:
+- **Método Estático:** $k_{\text{est}} = (15{,}64 \pm 0{,}33)\text{ N/m}$
+- **Método Dinâmico:** $k_{\text{din}} = (15{,}75 \pm 0{,}44)\text{ N/m}$
+
+Calcula-se a discrepância percentual relativa entre as duas determinações:
+\begin{equation}
+\text{Discrepância} = \frac{|k_{\text{est}} - k_{\text{din}}|}{k_{\text{est}}} \times 100\% = \frac{|15{,}64 - 15{,}75|}{15{,}64} \times 100\% = 0{,}70\%
+\end{equation}
+
+A discrepância de apenas $0{,}70\%$ — amplamente inferior a $1\%$ — aliada à sobreposição integral dos intervalos de incerteza experimental ($[15{,}31\,;\,15{,}97]\text{ N/m}$ e $[15{,}31\,;\,16{,}19]\text{ N/m}$), comprova com rigor a concordância física, a acurácia das medições e a perfeita equivalência entre a resposta estática (Lei de Hooke) e a resposta dinâmica (MHS) do oscilador.
 
 ## Simulação Cinemática e Energética do Oscilador
 
