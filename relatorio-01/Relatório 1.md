@@ -378,14 +378,23 @@ A Figura 4 ilustra o comportamento temporal simultâneo do deslocamento $x(t)$, 
 \label{fig:cinematica}
 \end{figure}
 
-> **[A FAZER: Redigir a Discussão da Cinemática do MHS]**
->
-> *Pontos a abordar na redação:*
-> 1. **Defasagens de Fase:**
->    - A velocidade $v(t)$ está adiantada de $\frac{\pi}{2}\text{ rad}$ ($90^\circ$) em relação ao deslocamento $x(t)$. Quando a massa atinge os extremos ($x = \pm A$), a velocidade é nula ($v = 0$). Quando passa pelo equilíbrio ($x = 0$), a velocidade atinge seu valor máximo em módulo ($v_{\text{máx}} = \omega A \approx 19{,}8\text{ cm/s}$).
->    - A aceleração $a(t)$ está em oposição de fase ($\pi\text{ rad}$ ou $180^\circ$) com a posição ($a(t) = -\omega^2 x(t)$). É máxima nos pontos de inversão de movimento ($a_{\text{máx}} = \omega^2 A \approx 1{,}96\text{ m/s}^2$) e nula na posição de equilíbrio.
-> 2. **Confronto com as Observações Experimentais:**
->    - Relatar como esse comportamento foi visualmente observado em laboratório (o corpo "para" instantaneamente no topo e na base antes de inverter o sentido do movimento e atinge a velocidade perceptivelmente mais rápida ao cruzar a marca de equilíbrio).
+Observando as curvas da Figura 4, nota-se que todas as grandezas cinemáticas são descritas por funções harmônicas trigonométricas interligadas por defasagens de fase bem definidas. Para facilitar a interpretação física, traçaram-se linhas verticais tracejadas nos instantes notáveis correspondentes aos múltiplos de um quarto de período ($t = k\frac{T}{4}$, com $k \in \mathbb{N}$), nos quais a massa atinge os extremos de oscilação ($x = \pm A$) ou cruza a posição de equilíbrio ($x = 0$):
+
+1. **Instantes nos extremos de deslocamento ($x = \pm A$, em $t = 0, \frac{T}{2}, T, \dots$):**
+   - A velocidade do corpo anula-se instantaneamente ($v = 0$) para possibilitar a inversão no sentido do movimento, exatamente como observado a olho nu durante a prática de laboratório.
+   - Concomitantemente, a aceleração atinge seu valor máximo em módulo ($|a_{\text{máx}}| = \omega^2 A \approx 1{,}96\text{ m/s}^2$).
+
+2. **Instantes na posição de equilíbrio ($x = 0$, em $t = \frac{T}{4}, \frac{3T}{4}, \dots$):**
+   - A velocidade atinge sua magnitude máxima ($|v_{\text{máx}}| = \omega A \approx 19{,}8\text{ cm/s}$), enquanto a aceleração torna-se rigorosamente nula ($a = 0$).
+   - Este resultado frequentemente causa estranheza à intuição inicial, pela dificuldade comum em separar visualmente velocidade de aceleração. No entanto, a explicação torna-se evidente ao analisar a dinâmica newtoniana: como $a = \frac{F_{\text{res}}}{m}$ e a força restauradora líquida obedece à Lei de Hooke ($F_{\text{res}}(x) = -kx$), na posição de equilíbrio a força resultante é nula ($F_{\text{res}}(0) = 0$), implicando obrigatoriamente que a aceleração deve ser nula ($a = 0$), mesmo que o corpo esteja se movendo em velocidade máxima.
+
+\noindent A consistência matemática dessas relações decorre da própria estrutura do cálculo diferencial. Partindo da função posição $x(t) = A\cos(\omega t + \phi_0)$ e derivando-a sucessivamente em relação ao tempo, obtêm-se:
+\begin{align}
+v(t) &= \frac{dx}{dt} = -A\omega\operatorname{sen}(\omega t + \phi_0) = A\omega\cos\left(\omega t + \phi_0 + \frac{\pi}{2}\right) \\
+a(t) &= \frac{dv}{dt} = \frac{d^2x}{dt^2} = -A\omega^2\cos(\omega t + \phi_0) = -\omega^2 x(t) = A\omega^2\cos(\omega t + \phi_0 + \pi)
+\end{align}
+
+\noindent Revela-se aqui uma admirável harmonia entre a física e a matemática: enquanto a velocidade sofre um adiantamento de fase de $90^\circ$ ($\frac{\pi}{2}\text{ rad}$), a aceleração sofre uma rotação de fase de $180^\circ$ ($\pi\text{ rad}$), tornando-se a própria função posição refletida e reescalada por $-\omega^2$. A matemática do cálculo diferencial não apenas prevê que a aceleração é máxima quando a posição é máxima, mas também impõe, com o sinal negativo, a exigência mecânica fundamental de que a aceleração deve sempre apontar no sentido oposto ao deslocamento — confirmando, com elegância teórica, a natureza puramente restauradora da mola.
 
 ### Balanço e Conservação das Energias ao Longo de um Período
 
