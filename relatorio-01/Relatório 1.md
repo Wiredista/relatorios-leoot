@@ -398,28 +398,29 @@ A Figura 5 apresenta a evolução temporal das energias cinética ($E_c$), poten
 \label{fig:energias}
 \end{figure}
 
-> **[A FAZER: Redigir a Discussão de Energias do MHS]**
->
-> *Pontos a abordar na redação:*
-> 1. **Conservação da Energia Mecânica Total:**
->    - A energia mecânica total $E_m = \frac{1}{2}kA^2 = \frac{1}{2}(15{,}70)(0{,}020)^2 = 3{,}14\text{ mJ}$ permanece rigorosamente constante ao longo de todo o tempo.
-> 2. **Transformação e Frequência das Energias:**
->    - A energia potencial é máxima nos extremos ($x = \pm A$), onde $E_p = E_m = 3{,}14\text{ mJ}$ e $E_c = 0$.
->    - Na posição de equilíbrio ($x = 0$), toda a energia se converte em cinética ($E_c = 3{,}14\text{ mJ}$ e $E_p = 0$).
->    - Como as funções de energia dependem do quadrado das funções trigonométricas ($\cos^2$ e $\operatorname{sen}^2$), as oscilações de energia ocorrem com o **dobro da frequência angular fundamental** ($2\omega$), completando dois ciclos energéticos a cada período mecânico $T$.
+Analisando o comportamento energético do sistema, observa-se a conservação da energia mecânica total ($E_m$). Utilizando o valor médio da constante elástica ($k \approx 15{,}70\text{ N/m}$) e a amplitude de oscilação $A = 0{,}020\text{ m}$, a energia mecânica total do sistema é dada por:
+
+\begin{equation}
+E_m = \frac{1}{2} k A^2 = \frac{1}{2} (15{,}70)(0{,}020)^2 = 3{,}14\text{ mJ}
+\end{equation}
+
+Este valor permanece rigorosamente constante ao longo do tempo, caracterizando um sistema conservativo ideal.
+
+Ao longo do ciclo de oscilação, ocorre uma conversão contínua entre a energia potencial elástica harmônica ($E_p$) e a energia cinética ($E_c$):
+- **Nos extremos do movimento ($x = \pm A$):** O corpo para instantaneamente para inverter o sentido do movimento ($v = 0$), zerando a energia cinética ($E_c = 0$). Consequentemente, toda a energia do sistema se encontra armazenada sob a forma de energia potencial elástica, de modo que $E_p = E_m = 3{,}14\text{ mJ}$.
+- **Na posição de equilíbrio ($x = 0$):** A deformação em relação ao ponto de equilíbrio é nula ($E_p = 0$) e o corpo atinge sua velocidade máxima ($v_{\text{máx}}$). Nesse ponto, atinge-se a totalidade da energia sob a forma de energia cinética ($E_c = 3{,}14\text{ mJ}$).
+
+A energia potencial depende de $\cos^2(\omega t + \phi_0)$ e a energia cinética de $\operatorname{sen}^2(\omega t + \phi_0)$. Por dependerem do quadrado das funções trigonométricas, essas energias variam com o dobro da frequência angular fundamental ($2\omega$). Isso implica que o sistema completa dois ciclos completos de conversão energética a cada período mecânico $T$ da oscilação do corpo.
 
 # Conclusão
 
-> **[A FAZER: Redigir a Conclusão final do relatório]**
->
-> *Estrutura recomendada para a conclusão:*
-> 1. **Validação das Leis Físicas:** Concluir que a Lei de Hooke e o modelo do Movimento Harmônico Simples foram empiricamente validados com coeficientes de correlação linear $R^2 > 0{,}997$.
-> 2. **Síntese dos Valores da Constante Elástica:**
->    - Método Estático: $k_{\text{est}} = (15{,}64 \pm 0{,}33)\text{ N/m}$
->    - Método Dinâmico: $k_{\text{din}} = (15{,}75 \pm 0{,}44)\text{ N/m}$
->    - Discrepância percentual: $0{,}70\%$, comprovando excelente concordância experimental.
-> 3. **Massa Efetiva da Mola:** Destacar que o intercepto linear do método dinâmico permitiu estimar a massa efetiva oscilante da mola em $m_{\text{ef}} \approx 5{,}9\text{ g}$.
-> 4. **Análise de Incertezas e Fontes de Erro:** Citar os principais fatores de dispersão (tempo de reação no cronômetro, erro de paralaxe na leitura da régua milimetrada e amortecimento residual do ar).
+A análise experimental apresentada permitiu a validação da Lei de Hooke e do Movimento Harmônico Simples através dos coeficientes de determinação $R^2 > 0{,}997$ obtidos pelos ajustes lineares.
+
+Os valores da constante elástica obtidos pelo Método Estático, $(15{,}64 \pm 0{,}33)\text{ N/m}$, e pelo Método Dinâmico, $(15{,}75 \pm 0{,}44)\text{ N/m}$, apresentaram excelente concordância experimental com apenas $0{,}70\%$ de discrepância percentual, confirmando a compatibilidade entre as duas metodologias.
+
+Também foi realizada a análise do intercepto linear no método dinâmico, resultando na estimativa da massa efetiva oscilante da mola no valor de $m_{\text{ef}} \approx 5{,}9\text{ g}$. Este resultado evidencia a importância da contribuição da inércia própria da mola no comportamento do sistema.
+
+Por fim, os principais fatores associados às incertezas e erros experimentais foram o tempo de reação no acionamento do cronômetro manual, o erro de paralaxe nas leituras da régua milimetrada e o efeito de amortecimento residual devido à resistência do ar sobre o corpo em oscilação. Apesar dessas fontes de erro, a precisão alcançada comprova de forma consistente os conceitos abordados na teoria.
 
 # Referências {.unnumbered}
 
