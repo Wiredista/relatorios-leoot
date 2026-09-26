@@ -38,23 +38,17 @@ toc-title: Sumário
 
 # Resumo {.unnumbered}
 
-> **[A FAZER: Redigir o Resumo definitivo]**
-> *Orientações:* Escrever um parágrafo único de 150 a 250 palavras contendo:
-> 1. Objetivo: validação da Lei de Hooke e determinação de $k$ da mola helicoidal.
-> 2. Métodos utilizados: estático (deformação sob massas calibradas) e dinâmico (período de oscilação do MHS).
-> 3. Principais resultados: $k_{\text{est}} = (15{,}64 \pm 0{,}33)\text{ N/m}$ e $k_{\text{din}} = (15{,}75 \pm 0{,}44)\text{ N/m}$, com discrepância de apenas $0{,}70\%$.
-> 4. Conclusão: confirmação do regime elástico linear ($R^2 > 0{,}997$) e equivalência estatística entre os métodos.
+O presente relatório investiga o comportamento mecânico de uma mola helicoidal suspensa verticalmente acoplada a massas calibradas, visando validar experimentalmente a Lei de Hooke e o modelo teórico do Movimento Harmônico Simples (MHS), além de determinar a constante elástica $k$ do sistema. A metodologia experimental estruturou-se em duas abordagens complementares: o método estático, baseado na medição da deformação vertical sob diferentes cargas suspensas, e o método dinâmico, baseado na cronometragem dos períodos de oscilação do MHS para cinco configurações de massa. Os ajustes lineares por mínimos quadrados resultaram em $k_{\text{est}} = (15{,}64 \pm 0{,}33)\text{ N/m}$ ($R^2 = 0{,}9982$) e $k_{\text{din}} = (15{,}75 \pm 0{,}44)\text{ N/m}$ ($R^2 = 0{,}9976$), revelando uma discrepância relativa de apenas $0{,}70\%$. A análise do intercepto linear dinâmico permitiu ainda estimar a massa efetiva oscilante da mola em $m_{\text{ef}} \approx 5{,}9\text{ g}$. O balanço analítico de energias mecânicas confirmou a conservação da energia mecânica total ($E_m = 3{,}14\text{ mJ}$) e a alternância contínua entre energia cinética e potencial harmônica com o dobro da frequência fundamental. Os resultados obtidos comprovam com elevada precisão a linearidade elástica do oscilador e a plena equivalência física e estatística entre os métodos estático e dinâmico.
 
-\noindent **Palavras-chave:** Lei de Hooke. Sistema massa-mola. Constante elástica. Movimento Harmônico Simples.
+\noindent **Palavras-chave:** Lei de Hooke. Sistema massa-mola. Constante elástica. Movimento Harmônico Simples. Conservação de energia.
 
 \newpage
 
 # Abstract {.unnumbered}
 
-> **[A FAZER: Redigir a versão em inglês do Resumo]**
-> *Guidelines:* Translate the Brazilian Portuguese abstract into technical English, keeping the same structure (Objectives, Methods, Results $k_{\text{est}}$ and $k_{\text{din}}$, Discrepancy, and Conclusions).
+This report investigates the mechanical behavior of a vertically suspended helical spring coupled to calibrated masses, aiming to experimentally validate Hooke's Law and the theoretical Simple Harmonic Motion (SHM) model, as well as to determine the spring constant $k$ of the system. The experimental procedure was structured into two complementary approaches: the static method, based on measuring vertical elongation under different loads, and the dynamic method, based on timing the oscillation periods of SHM for five mass configurations. Linear regression fits via least squares yielded $k_{\text{est}} = (15.64 \pm 0.33)\text{ N/m}$ ($R^2 = 0.9982$) and $k_{\text{din}} = (15.75 \pm 0.44)\text{ N/m}$ ($R^2 = 0.9976$), showing a relative discrepancy of only $0.70\%$. Furthermore, analyzing the dynamic linear intercept enabled estimating the effective oscillating mass of the spring as $m_{\text{ef}} \approx 5.9\text{ g}$. The analytical energy balance confirmed the conservation of total mechanical energy ($E_m = 3.14\text{ mJ}$) and the continuous exchange between kinetic and harmonic potential energy at twice the fundamental angular frequency. The results demonstrate with high accuracy the elastic linearity of the oscillator and the physical and statistical equivalence between the static and dynamic methods.
 
-\noindent **Keywords:** Hooke's Law. Mass-spring system. Spring constant. Simple Harmonic Motion.
+\noindent **Keywords:** Hooke's Law. Mass-spring system. Spring constant. Simple Harmonic Motion. Energy conservation.
 
 \newpage
 \tableofcontents
@@ -255,28 +249,27 @@ A Figura 2 apresenta o gráfico da deformação estática da mola em função da
 \label{fig:estatico}
 \end{figure}
 
-### Análise e Discussão do Método Estático (Roteiro Teórico e de Resultados)
+### Análise e Discussão do Método Estático
 
-> **[A FAZER: Redigir o texto corrido da Discussão do Método Estático]**
->
-> *Roteiro para a redação da sua análise:*
->
-> 1. **Validação da Lei de Hooke e Linearidade dos Dados:**
->    - **Fundamentação teórica:** Na condição de equilíbrio estático ($P = F_e$), a força peso equilibra a força elástica ($mg = k\Delta x$), resultando na relação linear $\Delta x = \left(\frac{g}{k}\right) m$.
->    - **Resultado obtido:** O ajuste por mínimos quadrados forneceu a equação $\Delta x = (0{,}6254 \pm 0{,}0133)\,m - (0{,}0073 \pm 0{,}0021)$ com coeficiente de determinação $R^2 = 0{,}9982$.
->    - **Interpretação:** O valor de $R^2$ muito próximo de 1 comprova empiricamente a proporcionalidade direta entre força e deformação, validando a Lei de Hooke para o intervalo de massas utilizado ($10\text{ g}$ a $260\text{ g}$).
->
-> 2. **Cálculo da Constante Elástica Estática ($k_{\text{est}}$):**
->    - O coeficiente angular da reta é $a = \frac{g}{k_{\text{est}}}$. Utilizando a gravidade local $g = 9{,}78\text{ m/s}^2$:
->      $$k_{\text{est}} = \frac{g}{a} = \frac{9{,}78}{0{,}6254} = (15{,}64 \pm 0{,}33)\text{ N/m}$$
->    - A incerteza $\sigma_{k_{\text{est}}}$ foi calculada através da propagação $\sigma_k = \frac{g}{a^2}\sigma_a$.
->
-> 3. **Interpretação do Coeficiente Linear ($b$):**
->    - O intercepto obtido foi $b = -7{,}3 \pm 2{,}1\text{ mm}$.
->    - Explique que esse pequeno deslocamento decorre do assentamento inicial da mola sob a carga do suporte de massas e de pequenas folgas mecânicas na fixação superior.
->
-> 4. **Limite de Elasticidade:**
->    - Destaque que não houve deformação plástica residual: ao retirar as massas ao final do experimento, a mola retornou exatamente à sua posição inicial de repouso ($x_0 = 460{,}0\text{ mm}$).
+A partir dos dados experimentais dispostos na Tabela 1 e do comportamento gráfico ilustrado na Figura 2, analisa-se a condição de equilíbrio estático entre a força peso e a força elástica restauradora exercida pela mola ($P = F_e \implies mg = k\Delta x$). Isolando a elongação em função da massa total suspensa, obtém-se a relação teórica linear:
+
+\begin{equation}
+\Delta x = \left(\frac{g}{k}\right) m
+\end{equation}
+
+A aplicação do método dos mínimos quadrados sobre os pontos experimentais forneceu a seguinte equação ajustada:
+\begin{equation}
+\Delta x = (0{,}6254 \pm 0{,}0133)\,m - (0{,}0073 \pm 0{,}0021)
+\end{equation}
+com coeficiente de determinação $R^2 = 0{,}9982$. O elevado valor de $R^2$ (superior a $0{,}998$) atesta empiricamente a estrita proporcionalidade direta entre a força aplicada e a deformação da mola, validando a Lei de Hooke para todo o domínio de massas testado ($10\text{ g}$ a $260\text{ g}$).
+
+Identificando o coeficiente angular da reta ajustada como $a = \frac{g}{k_{\text{est}}}$ e considerando a aceleração da gravidade local de Uberlândia ($g = 9{,}784\text{ m/s}^2$), determina-se a constante elástica estática:
+\begin{equation}
+k_{\text{est}} = \frac{g}{a} = \frac{9{,}784}{0{,}6254} = (15{,}64 \pm 0{,}33)\text{ N/m}
+\end{equation}
+onde a incerteza associada foi propagada através da relação $\sigma_{k_{\text{est}}} = \left(\frac{g}{a^2}\right)\sigma_a$.
+
+O coeficiente linear obtido ($b = -7{,}3 \pm 2{,}1\text{ mm}$) apresenta um pequeno desvio em relação à origem teórica ($b = 0$), atribuído ao assentamento inicial das espiras da mola sob o peso do suporte de massas e a folgas mecânicas no ponto de fixação da haste. Adicionalmente, verificou-se a preservação da integridade estrutural do sistema: após a remoção completa de todas as massas ao final do experimento, a mola retornou exatamente à sua posição inicial de repouso ($x_0 = 460{,}0\text{ mm}$), comprovando que as deformações ocorreram estritamente dentro do limite elástico do material, sem qualquer deformação plástica residual.
 
 ## Método Dinâmico
 
